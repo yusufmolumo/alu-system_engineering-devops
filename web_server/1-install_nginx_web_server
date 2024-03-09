@@ -1,16 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Bash script that configures a new Ubuntu machine nginx
 
-# Update package index
-apt-get update
+sudo apt-get update
+sudo apt-get install -y nginx
 
-# Install Nginx
-apt-get install -y nginx
+echo "Holberton School" | sudo tee /var/www/html/index.html
 
-# Set Nginx to listen on port 80
-sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
-
-# Restart Nginx
-kill -s HUP $(cat /var/run/nginx.pid)
-
-# Create HTML file containing the string "Holberton School"
-echo "Holberton School for the win!" > /var/www/html/index.html
+sudo nginx -t
+sudo service nginx start

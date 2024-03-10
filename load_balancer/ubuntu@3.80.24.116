@@ -10,11 +10,11 @@ sudo apt-get -y install haproxy
 # edit config file
 server_config=\
 "
-frontend  ysuufmolumo_frontend
+frontend  yusufmolumo_frontend
         bind *:80
         mode http
-        default_backend ysuufmolumo_backend
-backend ysuufmulomo_backend
+        default_backend yusufmolumo_backend
+backend yusufmulomo_backend
         balance roundrobin
         server 5901-web-01 54.221.50.120:80 check
         server 5901-web-02 3.80.24.116:80 check

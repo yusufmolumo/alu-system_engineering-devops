@@ -1,6 +1,6 @@
-#!/bin/bash
-# Stops nginx service, restarts it, waits for it to start, then curls to check if it's running
-service nginx stop
-nginx & sleep 2
-curl -s 0:80
+#!/usr/bin/env bash
+# Starts Nginx but prevents service from reflecting true state
+sudo service nginx start &
+sleep 1
+curl 0:80
 

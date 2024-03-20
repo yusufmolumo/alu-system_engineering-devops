@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Starts Nginx but prevents service from reflecting true state
-sudo service nginx start &
-sleep 1
-curl 0:80
+# Starts Nginx in background & displays welcome page
+sudo service nginx start & curl 0:80
 

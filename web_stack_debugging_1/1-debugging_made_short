@@ -1,0 +1,5 @@
+#!/bin/bash
+service nginx stop
+nginx &
+sleep 2
+curl 0:80

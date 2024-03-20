@@ -1,4 +1,6 @@
 #!/bin/bash
 # Stops nginx service, restarts it, waits for it to start, then curls to check if it's running
-service nginx stop;nginx & sleep 2;curl -s 0:80
+service nginx stop
+nginx & sleep 2
+curl -s 0:80
 

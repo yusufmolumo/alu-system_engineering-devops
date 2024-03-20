@@ -1,7 +1,7 @@
 #!/bin/bash
 # Stops nginx service, restarts it, waits for it to start, then curls to check if it's running
 service nginx stop
-nginx &
-sleep 2
-curl -s 0:80 | grep -q "Welcome to nginx!" && echo "1" || echo "0"
-service nginx status | grep -q "nginx is not running" && echo "* nginx is not running" || echo "* nginx is running"
+nginx & sleep 2
+curl -s 0:80 | grep -q "Welcome to nginx!"
+service nginx status | grep -q "nginx is not running" && echo "* nginx is not running"
+
